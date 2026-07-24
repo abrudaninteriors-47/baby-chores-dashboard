@@ -1,0 +1,123 @@
+/* Task Card Styling */
+.task-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.task-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Completed Task Styling */
+.task-card.completed {
+  background: #f0f4ff;
+  border-color: #667eea;
+}
+
+.task-card.completed .task-name {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Task Content */
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+/* Checkbox Styling */
+.task-checkbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+/* Task Info */
+.task-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-emoji {
+  font-size: 1.8rem;
+}
+
+.task-text {
+  flex: 1;
+}
+
+.task-name {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.task-time {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #ff5252;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .task-card {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .task-emoji {
+    font-size: 1.5rem;
+  }
+
+  .task-name {
+    font-size: 1rem;
+  }
+
+  .task-time {
+    font-size: 0.85rem;
+  }
+
+  .delete-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+}
