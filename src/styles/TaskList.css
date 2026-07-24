@@ -1,0 +1,43 @@
+/* Task List Styling */
+.task-list {
+  margin-bottom: 30px;
+}
+
+.task-list h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.tasks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+/* Empty State */
+.task-list.empty {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  border: 2px dashed #ddd;
+}
+
+.task-list.empty p {
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tasks-container {
+    grid-template-columns: 1fr;
+  }
+
+  .task-list h2 {
+    font-size: 1.2rem;
+  }
+}
